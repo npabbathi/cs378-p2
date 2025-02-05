@@ -78,19 +78,26 @@ const menuItems = [
   }
 ];
 
+const MenuHeader = ({ logo, slogan, description }) => {
+  return (
+    <div className='row'>
+      <div className='col'>
+        <img className='logo' src={`./images/${logo}.png`} alt={`O's campus cafe`} />
+        <div className='catch_phrase'>
+          <h3>{slogan}</h3>
+          <h1>{description}</h1>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
 
 function App() {
   return (
     <div>
-      <div className='row'>
-        <div className='col'>
-          <img className='logo' src={`./images/logo.png`} alt={`O's campus cafe`} />
-          <div className='catch_phrase'>
-            <h3>Delicious, From-Scratch Recipes Close at Hand</h3>
-            <h1>The Fresh Choice of UT!</h1>
-          </div>
-        </div>
-      </div>
+      <MenuHeader logo={"logo"} slogan={"Delicious, From-Scratch Recipes Close at Hand"} description={"The Fresh Choice of UT!"}/>
       <div className="menu">
         {menuItems.map((item) => (
           <MenuItem title={item.title} description={item.description} imageName={item.imageName} price={item.price} />
