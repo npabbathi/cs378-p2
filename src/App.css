@@ -23,12 +23,21 @@ img {
 .menu_item {
   margin: 30px;
 }
-
+/* button styling: https://www.w3schools.com/css/css3_buttons.asp */
 .round {
-  padding: 7px;
-  background-color: beige;
-  box-shadow: 2px 2px;
-  border-radius: 20px;
+  border-radius: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: white;
+  border: 2px solid darkolivegreen; /* Green */
+}
+
+.round:hover {
+  background-color: gainsboro;
+}
+
+.round:active {
+  background-color: grey;
 }
 
 .logo {
@@ -50,4 +59,20 @@ h3 {
 .catch_phrase {
   color:darkgoldenrod;
   margin-bottom: 50px;
+}
+
+.amount {
+  display: inline-block;
+  padding: 10px;
+}
+
+.price {
+  margin-left: 30px;
+}
+
+.order {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 10px;
 }
